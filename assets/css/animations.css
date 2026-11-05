@@ -1,0 +1,179 @@
+/* Motion tokens */
+:root {
+	--motion-duration: 0.55s;
+	--motion-duration-fast: 0.35s;
+	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hero entrance (load) */
+@keyframes heroEnter {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 14px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.hero-enter {
+	opacity: 0;
+	animation: heroEnter 0.6s var(--motion-ease) forwards;
+	will-change: opacity, transform;
+}
+
+html.js-animations-pending #header .image.avatar,
+html.js-animations-pending #one header.major h2,
+html.js-animations-pending #header h1,
+html.js-animations-pending #header > .inner > p,
+html.js-animations-pending #one > p,
+html.js-animations-pending #one .actions,
+html.js-animations-pending .get-in-touch-btn,
+html.js-animations-pending #footer .icons,
+html.js-animations-pending #footer .copyright {
+	opacity: 0;
+}
+
+/* Scroll reveal */
+.reveal-fade-up {
+	opacity: 0;
+	transform: translate3d(0, 18px, 0);
+	transition:
+		opacity var(--motion-duration) var(--motion-ease),
+		transform var(--motion-duration) var(--motion-ease);
+	will-change: opacity, transform;
+}
+
+.reveal-fade-up.is-revealed {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+/* Project cards — image-only motion (editorial layout, no card lift) */
+.work-item {
+	transition: none;
+}
+
+.work-item .image.fit img,
+.work-item .image.fit video {
+	transition: transform 0.45s var(--motion-ease);
+}
+
+.work-item:hover .image.fit img,
+.work-item:hover .image.fit video {
+	transform: scale(1.04);
+}
+
+.work-item--maintenance:hover {
+	transform: none;
+}
+
+.work-item--maintenance:hover .image.fit img,
+.work-item--maintenance:hover .image.fit video {
+	transform: none;
+}
+
+.work-item a.image.thumb {
+	transition: transform var(--motion-duration-fast) var(--motion-ease);
+}
+
+.work-item a.image.thumb:active {
+	transform: scale(0.995);
+}
+
+/* Navigation & interactive polish */
+.get-in-touch-btn,
+#one .actions .button,
+#footer .icons a {
+	transition:
+		transform var(--motion-duration-fast) var(--motion-ease),
+		box-shadow var(--motion-duration-fast) var(--motion-ease),
+		background-color 0.2s ease-in-out,
+		border-color 0.2s ease-in-out,
+		color 0.2s ease-in-out;
+}
+
+.get-in-touch-btn:hover,
+#one .actions .button:hover {
+	transform: translate3d(0, -2px, 0);
+}
+
+.get-in-touch-btn:active,
+#one .actions .button:active {
+	transform: translate3d(0, 0, 0);
+}
+
+#footer .icons a:hover {
+	transform: translate3d(0, -2px, 0);
+}
+
+ul.labeled-icons li a {
+	transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+ul.labeled-icons li a:hover {
+	opacity: 0.85;
+}
+
+/* Contact form */
+#three input[type="text"],
+#three input[type="email"],
+#three textarea,
+#three input[type="submit"] {
+	transition:
+		border-color 0.2s ease-in-out,
+		box-shadow 0.2s ease-in-out,
+		transform var(--motion-duration-fast) var(--motion-ease),
+		background-color 0.2s ease-in-out;
+}
+
+#three input[type="text"]:focus,
+#three input[type="email"]:focus,
+#three textarea:focus {
+	box-shadow: 0 0 0 3px rgba(82, 100, 122, 0.24);
+	transform: translate3d(0, -1px, 0);
+}
+
+#three input[type="submit"]:hover {
+	transform: translate3d(0, -2px, 0);
+}
+
+#three input[type="submit"]:active {
+	transform: translate3d(0, 0, 0);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	:root {
+		scroll-behavior: auto;
+	}
+
+	.hero-enter,
+	.reveal-fade-up {
+		opacity: 1 !important;
+		transform: none !important;
+		animation: none !important;
+		transition: none !important;
+	}
+
+	.work-item:hover,
+	.work-item:hover .image.fit img,
+	.work-item:hover .image.fit video,
+	.get-in-touch-btn:hover,
+	#one .actions .button:hover,
+	#footer .icons a:hover,
+	#three input:focus,
+	#three input[type="submit"]:hover {
+		transform: none !important;
+	}
+}
+
+html.reduce-motion .hero-enter,
+html.reduce-motion .reveal-fade-up {
+	opacity: 1 !important;
+	transform: none !important;
+	animation: none !important;
+	transition: none !important;
+}

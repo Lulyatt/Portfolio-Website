@@ -1,5 +1,4 @@
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
 /*
 	Strata by HTML5 UP
@@ -2158,7 +2157,7 @@ input[type="radio"]+label:before {
 	-webkit-transition: opacity 0.2s ease-in-out;
 	-ms-transition: opacity 0.2s ease-in-out;
 	transition: opacity 0.2s ease-in-out;
-	background: url("images/overlay.png");
+	/* background: url("images/overlay.png"); */
 	border-radius: 0.35em;
 	content: '';
 	display: block;
@@ -2739,7 +2738,7 @@ input[type="button"]:disabled,
 	object-fit: cover;
 	object-position: center center;
 	display: block;
-	border-radius: 0.35em;
+	border-radius: 0.2em;
 }
 
 
@@ -2780,7 +2779,7 @@ input[type="button"]:disabled,
 	justify-content: space-between;
 	background-color: #1f1815;
 	background-attachment: scroll, scroll;
-	background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+	/* background-image: url("images/overlay.png"), url("../../images/bg.jpg"); */
 	background-position: top left, top left;
 	background-repeat: repeat, no-repeat;
 	background-size: auto, 150%;
@@ -3444,38 +3443,4 @@ body.is-touch .poptrox-popup .closer {
 	z-index: 10000;
 	min-width: auto;
 	font-size: 0.85em;
-}
-
-body, input, select, textarea {
-	color: #555555;
-  }
-  
-  h1, h2, h3, h4, h5, h6, strong, b {
-	color: #333333;
-  }
-  /* Darker buttons */
-.button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  color: #444444 !important;
-}
-
-/* Get In Touch form fields */
-#three input[type="text"],
-#three input[type="email"],
-#three textarea {
-	color: #555555 !important;
-}
-
-#three input[type="text"]::placeholder,
-#three input[type="email"]::placeholder,
-#three textarea::placeholder {
-	color: #555555 !important;
-	opacity: 1;
-}
-
-/* Darker contact icons */
-ul.labeled-icons li h3 {
-	color: #666666;
 }

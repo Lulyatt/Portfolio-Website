@@ -6,7 +6,13 @@
 	<title>Built By Luke</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700&display=swap" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/typography.css" />
+	<link rel="stylesheet" href="assets/css/theme.css" />
+	<link rel="stylesheet" href="assets/css/animations.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
 		integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -56,34 +62,51 @@
 		<!-- Two -->
 		<section id="two">
 			<h2>Recent Work</h2>
-			<div class="row">
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="https://chilworthvillagehall.netlify.app/" target="_blank" class="image fit thumb">
-						<video src="videos/ChilworthVillageHall.mp4?v=2" autoplay muted loop playsinline preload="auto"></video>
+			<div class="work-grid">
+				<article class="work-item">
+					<header class="work-item__head">
+						<span class="work-item__index">01</span>
+						<span class="work-item__rule" aria-hidden="true"></span>
+					</header>
+					<a href="https://chilworthvillagehall.netlify.app/" target="_blank" rel="noopener noreferrer" class="image fit thumb">
+						<img src="images/thumbs/Chilworth Village Hall Thumbnail.png" alt="Screenshot of Chilworth Village Hall website" />
 					</a>
 					<h3>Chilworth Village Hall</h3>
 					<p>A local community centre website built with Vanilla JS and Decap CMS.</p>
 				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="https://olive-and-rose.netlify.app/" target="_blank" class="image fit thumb">
-						<video src="videos/Olive-and-Rose.mp4?v=2" autoplay muted loop playsinline preload="auto"></video>
+				<article class="work-item">
+					<header class="work-item__head">
+						<span class="work-item__index">02</span>
+						<span class="work-item__rule" aria-hidden="true"></span>
+					</header>
+					<a href="https://olive-and-rose.netlify.app/" target="_blank" rel="noopener noreferrer" class="image fit thumb">
+						<img src="images/Olive and Rose.png" alt="Screenshot of Olive and Rose website" />
 					</a>
 					<h3>Olive and Rose</h3>
-					<p>A luxury boutique salon website concept built with React, TypeScript, TanStack Start and Tailwind CSS.</p>	
+					<p>A luxury boutique salon website concept built with React, TypeScript, TanStack Start and Tailwind CSS.</p>
 				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="https://broodl-mood-tracking-app.netlify.app/" target="_blank" class="image fit thumb"><video
-							src="videos/Broodl.mp4?v=2" autoplay muted loop playsinline preload="auto"></video>
+				<article class="work-item">
+					<header class="work-item__head">
+						<span class="work-item__index">03</span>
+						<span class="work-item__rule" aria-hidden="true"></span>
+					</header>
+					<a href="https://broodl-mood-tracking-app.netlify.app/" target="_blank" rel="noopener noreferrer" class="image fit thumb">
+						<img src="images/broodl.png" alt="Screenshot of Broodl website" />
 					</a>
 					<h3>Broodl</h3>
 					<p> A mood tracking app builtwith Next.JS, Tailwind CSS and Firebase.</p>
 				</article>
-				<article class="col-6 col-12-xsmall work-item work-item--maintenance">
-					<span class="image fit thumb"><video src="videos/TOLGC.mp4?v=2" autoplay muted loop playsinline preload="auto"></video>
+				<article class="work-item work-item--maintenance">
+					<header class="work-item__head">
+						<span class="work-item__index">04</span>
+						<span class="work-item__rule" aria-hidden="true"></span>
+					</header>
+					<span class="image fit thumb">
+						<img src="images/thumbs/TOLGC Thumbnail.png" alt="Screenshot of The Old Ladies Game Club website" />
 					</span>
 					<h3>The Old Ladies Game Club</h3>
 					<p>A retro gaming community website built with Next.js, Tailwind CSS, and Firebase.</p>
-				</article>		
+				</article>
 			</div>
 		</section>
 		<!-- Three -->
@@ -146,8 +169,8 @@
 				  </a></li>
 			</ul>
 			<ul class="copyright">
-				<li>&copy; Built By Luke</li>
-							</ul>
+				<li>&copy; Built-By-Luke</li>
+			</ul>
 		</div>
 	</footer>
 
@@ -158,6 +181,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/animations.js"></script>
 
 </body>
 

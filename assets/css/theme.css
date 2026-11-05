@@ -1,0 +1,274 @@
+/*
+	Palette
+	- Warm ivory:  #F6F4EF
+	- Charcoal:    #292B29
+	- Muted olive: #737C68
+	- Slate blue:  #52647A
+	- Warm grey:   #DCD9D0
+	- Soft brown:  #A18C77
+*/
+
+:root {
+	--color-ivory: #F6F4EF;
+	--color-charcoal: #292B29;
+	--color-olive: #737C68;
+	--color-slate: #52647A;
+	--color-warm-grey: #DCD9D0;
+	--color-soft-brown: #A18C77;
+	--color-slate-dark: #425363;
+	--color-ivory-muted: rgba(246, 244, 239, 0.82);
+}
+
+/* Base */
+body {
+	background: var(--color-ivory);
+}
+
+body,
+input,
+select,
+textarea,
+p,
+label {
+	color: var(--color-charcoal);
+}
+
+#main li {
+	color: var(--color-charcoal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+	color: var(--color-charcoal);
+}
+
+a {
+	color: var(--color-charcoal);
+	border-bottom-color: var(--color-soft-brown);
+}
+
+a:hover {
+	color: var(--color-charcoal) !important;
+	opacity: 0.82;
+}
+
+hr,
+#main > section {
+	border-color: var(--color-warm-grey);
+}
+
+/* Sidebar */
+#header {
+	background-color: var(--color-charcoal);
+	color: var(--color-ivory-muted);
+}
+
+#header strong,
+#header b,
+#header h2,
+#header h3,
+#header h4,
+#header h5,
+#header h6 {
+	color: var(--color-ivory);
+}
+
+#header h1 {
+	color: var(--color-ivory-muted);
+}
+
+#header > .inner > p {
+	color: var(--color-warm-grey);
+}
+
+#footer .icons a {
+	color: rgba(246, 244, 239, 0.55);
+}
+
+#footer .icons a:hover {
+	color: var(--color-ivory);
+}
+
+#footer .copyright {
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 0.8em;
+}
+
+#footer .copyright li {
+	color: rgba(255, 255, 255, 0.4);
+	border-left-color: rgba(255, 255, 255, 0.25);
+}
+
+#footer .copyright li a {
+	color: inherit;
+}
+
+/* Buttons */
+.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	border-color: var(--color-warm-grey);
+	color: var(--color-charcoal) !important;
+}
+
+.button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+	border-color: var(--color-charcoal);
+	color: var(--color-charcoal) !important;
+	background-color: rgba(41, 43, 41, 0.05);
+}
+
+.button.primary,
+input[type="submit"].primary {
+	background-color: var(--color-warm-grey);
+	border-color: var(--color-charcoal);
+	color: var(--color-charcoal) !important;
+}
+
+.button.primary:hover,
+input[type="submit"].primary:hover {
+	background-color: var(--color-charcoal);
+	border-color: var(--color-charcoal);
+	color: var(--color-ivory) !important;
+}
+
+.get-in-touch-btn,
+a.get-in-touch-btn.button.primary {
+	background-color: var(--color-slate);
+	border-color: var(--color-slate);
+	color: var(--color-ivory) !important;
+}
+
+.get-in-touch-btn:hover,
+a.get-in-touch-btn.button.primary:hover {
+	background-color: var(--color-slate-dark);
+	border-color: var(--color-slate-dark);
+	color: var(--color-ivory) !important;
+	opacity: 1;
+}
+
+.button:active,
+.button.primary:active,
+input[type="submit"]:active {
+	background-color: rgba(82, 100, 122, 0.12);
+}
+
+/* Forms */
+label {
+	color: var(--color-charcoal);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+	background: #FFFFFF;
+	border-color: transparent;
+	color: var(--color-charcoal);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+	border-color: var(--color-slate);
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+	color: var(--color-charcoal) !important;
+	opacity: 0.55;
+}
+
+#three input[type="text"],
+#three input[type="email"],
+#three textarea {
+	color: var(--color-charcoal) !important;
+}
+
+#three input[type="text"]::placeholder,
+#three input[type="email"]::placeholder,
+#three textarea::placeholder {
+	color: var(--color-charcoal) !important;
+	opacity: 0.55;
+}
+
+ul.labeled-icons li,
+ul.labeled-icons li h3,
+ul.labeled-icons li a {
+	color: var(--color-charcoal);
+}
+
+#one header.major h2 small {
+	color: var(--color-charcoal);
+	opacity: 0.9;
+}
+
+.work-item h3,
+.work-item p {
+	color: var(--color-charcoal);
+}
+
+/* Project cards */
+.work-item .image.thumb:after {
+	border-color: var(--color-charcoal);
+	background-color: var(--color-warm-grey);
+	color: var(--color-charcoal) !important;
+}
+
+.work-item .image.thumb:hover:after {
+	background-color: var(--color-charcoal);
+	border-color: var(--color-charcoal);
+	color: var(--color-ivory) !important;
+}
+
+.work-item--maintenance .image.thumb:after,
+.work-item--maintenance .image.thumb:hover:after {
+	background-color: var(--color-warm-grey);
+	border-color: var(--color-charcoal);
+	color: var(--color-charcoal) !important;
+}
+
+/* Misc template surfaces */
+.box,
+input[type="checkbox"]+label:before,
+input[type="radio"]+label:before {
+	border-color: var(--color-warm-grey);
+}
+
+table {
+	border-color: var(--color-warm-grey);
+}
+
+table tbody tr {
+	border-color: var(--color-warm-grey);
+}
+
+@media screen and (max-width: 980px) {
+	#footer {
+		background-color: var(--color-charcoal);
+	}
+}
+
+/* Main content catch-all */
+#main,
+#main p,
+#main li,
+#main h2,
+#main h3,
+#main a:not(.button):not(.image) {
+	color: var(--color-charcoal);
+}
