@@ -222,6 +222,23 @@ ul.labeled-icons li a {
 	color: var(--color-charcoal);
 }
 
+/* Project thumbnails — white mat, hairline border, soft lift */
+.work-item .image.fit {
+	background: #fff;
+	padding: clamp(4px, 0.45vw, 6px);
+	border: 1px solid var(--color-warm-grey);
+	border-radius: 8px;
+	box-shadow:
+		0 4px 14px rgba(41, 43, 41, 0.08),
+		0 1px 3px rgba(41, 43, 41, 0.05);
+	box-sizing: border-box;
+}
+
+.work-item .image.fit img,
+.work-item .image.fit video {
+	border-radius: max(2px, calc(8px - clamp(4px, 0.45vw, 6px)));
+}
+
 /* Project cards */
 .work-item .image.thumb:after {
 	border-color: var(--color-charcoal);
@@ -272,3 +289,4 @@ table tbody tr {
 #main a:not(.button):not(.image) {
 	color: var(--color-charcoal);
 }
+

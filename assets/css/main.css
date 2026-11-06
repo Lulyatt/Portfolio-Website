@@ -2682,6 +2682,7 @@ input[type="button"]:disabled,
 	z-index: 1;
 	background: rgba(44, 44, 44, 0.55);
 	transition: opacity 0.2s ease-in-out;
+	
 }
 
 .work-item .image.thumb:hover:before {
