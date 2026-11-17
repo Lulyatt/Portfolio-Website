@@ -65,7 +65,7 @@ hr,
 
 /* Sidebar */
 #header {
-	background-color: var(#263B50);
+	background-color: #263B50;
 	color: var(--color-ivory-muted);
 }
 
@@ -138,9 +138,18 @@ hr,
 .sidebar-code span:nth-child(30) { top: 95%; left: 34%; font-size: 0.64rem; }
 
 @media screen and (max-width: 980px) {
-	.sidebar-code {
-		display: none;
-	}
+	.sidebar-code span:nth-child(11) { top: 4%; left: 84%; }
+	.sidebar-code span:nth-child(12) { top: 26%; left: 90%; }
+	.sidebar-code span:nth-child(13) { top: 48%; left: 88%; }
+	.sidebar-code span:nth-child(14) { top: 54%; left: 2%; }
+	.sidebar-code span:nth-child(15) { top: 93%; left: 4%; }
+	.sidebar-code span:nth-child(16) { top: 93%; left: 70%; }
+	.sidebar-code span:nth-child(17) { top: 96%; left: 46%; }
+	.sidebar-code span:nth-child(25) { top: 18%; left: 90%; }
+	.sidebar-code span:nth-child(26) { top: 34%; left: 92%; }
+	.sidebar-code span:nth-child(27) { top: 96%; left: 16%; }
+	.sidebar-code span:nth-child(28) { top: 96%; left: 80%; }
+	.sidebar-code span:nth-child(29) { top: 93%; left: 28%; }
 }
 
 #header strong,
@@ -228,6 +237,15 @@ a.get-in-touch-btn.button.primary:hover {
 	border-color: var(--color-slate-dark);
 	color: var(--color-ivory) !important;
 	opacity: 1;
+}
+
+@media screen and (max-width: 980px) {
+	.get-in-touch-btn,
+	a.get-in-touch-btn.button.primary,
+	.get-in-touch-btn:hover,
+	a.get-in-touch-btn.button.primary:hover {
+		border-color: var(--color-ivory);
+	}
 }
 
 .button:active,
@@ -364,7 +382,8 @@ table tbody tr {
 
 @media screen and (max-width: 980px) {
 	#footer {
-		background-color: var(--color-charcoal);
+		background-color: #263B50;
+		background-image: none;
 	}
 }
 
