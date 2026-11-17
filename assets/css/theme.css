@@ -65,8 +65,82 @@ hr,
 
 /* Sidebar */
 #header {
-	background-color: var(--color-charcoal);
+	background-color: var(#263B50);
 	color: var(--color-ivory-muted);
+}
+
+#header > .inner {
+	position: relative;
+	z-index: 1;
+}
+
+.sidebar-code {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+	pointer-events: none;
+	user-select: none;
+	-webkit-mask-image: radial-gradient(ellipse at 58% 38%, transparent 0 16%, #000 58%);
+	mask-image: radial-gradient(ellipse at 58% 38%, transparent 0 16%, #000 58%);
+}
+
+.sidebar-code span {
+	position: absolute;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0.01em;
+	color: var(--color-ivory);
+	opacity: 0.16;
+	white-space: nowrap;
+}
+
+.sidebar-code span:nth-child(3n) {
+	color: var(--color-warm-grey);
+	opacity: 0.22;
+}
+
+.sidebar-code span:nth-child(3n + 1) {
+	color: var(--color-ivory);
+	opacity: 0.12;
+}
+
+.sidebar-code span:nth-child(1) { top: 5%; left: 9%; font-size: 0.82rem; }
+.sidebar-code span:nth-child(2) { top: 8%; left: 68%; font-size: 1.35rem; transform: rotate(8deg); }
+.sidebar-code span:nth-child(3) { top: 13%; left: 4%; font-size: 0.7rem; }
+.sidebar-code span:nth-child(4) { top: 17%; left: 74%; font-size: 1.2rem; }
+.sidebar-code span:nth-child(5) { top: 22%; left: 16%; font-size: 0.78rem; transform: rotate(-6deg); }
+.sidebar-code span:nth-child(6) { top: 27%; left: 62%; font-size: 0.66rem; }
+.sidebar-code span:nth-child(7) { top: 34%; left: 6%; font-size: 1.05rem; }
+.sidebar-code span:nth-child(8) { top: 41%; left: 72%; font-size: 0.74rem; transform: rotate(4deg); }
+.sidebar-code span:nth-child(9) { top: 47%; left: 10%; font-size: 1.28rem; }
+.sidebar-code span:nth-child(10) { top: 53%; left: 64%; font-size: 0.7rem; }
+.sidebar-code span:nth-child(11) { top: 58%; left: 24%; font-size: 1.45rem; opacity: 0.1; }
+.sidebar-code span:nth-child(12) { top: 63%; left: 7%; font-size: 0.8rem; transform: rotate(-4deg); }
+.sidebar-code span:nth-child(13) { top: 69%; left: 58%; font-size: 0.76rem; }
+.sidebar-code span:nth-child(14) { top: 74%; left: 12%; font-size: 0.64rem; }
+.sidebar-code span:nth-child(15) { top: 80%; left: 30%; font-size: 0.88rem; transform: rotate(6deg); }
+.sidebar-code span:nth-child(16) { top: 85%; left: 18%; font-size: 0.78rem; }
+.sidebar-code span:nth-child(17) { top: 90%; left: 48%; font-size: 0.66rem; }
+.sidebar-code span:nth-child(18) { top: 11%; left: 42%; font-size: 0.68rem; transform: rotate(-8deg); }
+.sidebar-code span:nth-child(19) { top: 3%; left: 46%; font-size: 0.62rem; }
+.sidebar-code span:nth-child(20) { top: 20%; left: 46%; font-size: 0.7rem; transform: rotate(5deg); }
+.sidebar-code span:nth-child(21) { top: 31%; left: 70%; font-size: 0.64rem; }
+.sidebar-code span:nth-child(22) { top: 37%; left: 28%; font-size: 0.86rem; transform: rotate(-3deg); }
+.sidebar-code span:nth-child(23) { top: 45%; left: 78%; font-size: 0.72rem; }
+.sidebar-code span:nth-child(24) { top: 51%; left: 36%; font-size: 0.9rem; opacity: 0.1; }
+.sidebar-code span:nth-child(25) { top: 61%; left: 76%; font-size: 0.68rem; transform: rotate(7deg); }
+.sidebar-code span:nth-child(26) { top: 67%; left: 30%; font-size: 1.05rem; }
+.sidebar-code span:nth-child(27) { top: 76%; left: 42%; font-size: 0.66rem; transform: rotate(-5deg); }
+.sidebar-code span:nth-child(28) { top: 82%; left: 70%; font-size: 0.74rem; }
+.sidebar-code span:nth-child(29) { top: 88%; left: 6%; font-size: 0.8rem; }
+.sidebar-code span:nth-child(30) { top: 95%; left: 34%; font-size: 0.64rem; }
+
+@media screen and (max-width: 980px) {
+	.sidebar-code {
+		display: none;
+	}
 }
 
 #header strong,
@@ -143,8 +217,8 @@ input[type="submit"].primary:hover {
 
 .get-in-touch-btn,
 a.get-in-touch-btn.button.primary {
-	background-color: var(--color-slate);
-	border-color: var(--color-slate);
+	background-color: #263B50;
+	border-color: #263B50;
 	color: var(--color-ivory) !important;
 }
 
@@ -218,8 +292,22 @@ ul.labeled-icons li a {
 }
 
 .work-item h3,
-.work-item p {
+.work-item__copy > p:not(.work-item__status) {
 	color: var(--color-charcoal);
+}
+
+a.work-item__link,
+a.work-item__link:hover {
+	color: var(--color-slate) !important;
+	opacity: 1;
+}
+
+a:focus-visible,
+.button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+	outline: 2px solid var(--color-slate);
+	outline-offset: 3px;
 }
 
 /* Project thumbnails — white mat, hairline border, soft lift */
